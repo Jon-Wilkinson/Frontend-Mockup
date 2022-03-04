@@ -6,13 +6,24 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Login from './Login';
+import MainPage from './MainPage';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App/>}/>
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/" element={<App/>}>
+          <Route path="mainpage" element={<MainPage />} />
+          <Route path="login" element={<Login />} />
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

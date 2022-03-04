@@ -1,14 +1,21 @@
-import './App.css';
+import './css/App.css';
 import './ethereum-test.js'
-import {Link} from 'react-router-dom';
+import {Outlet, Link} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>This is the frontend!</h1>
-        <Link to='/login'>Log in here!</Link>
-      </header>
+    <Outlet />
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+        <Link to='mainpage'>Go to Main Page</Link>
+        <hr/>
+        <Link to='login'>Go to Login Page</Link>
+      </nav>
     </div>
   );
 }
