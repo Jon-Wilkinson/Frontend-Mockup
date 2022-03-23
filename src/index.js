@@ -3,10 +3,26 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
+/* 
+To add a route:
+Create a new file in src: <ROUTE>.js
+Create a new file in css: <ROUTE>.css
+Copy paste app.css contents into <ROUTE>.css and change app to <ROUTE> wherever it appears in there to get some basic formatting
+Look at imports and format of other js files to get an idea of how to format <ROUTE>.js
+In general, create a function called <ROUTE> which returns some html and includes the line:
+export default <ROUTE>;
+at the end. 
+Then go back here and add:
+import <ROUTE> from './<ROUTE>';
+and finally add:
+<Route path="<ROUTE>" element={ <ROUTE> />} />
+to the routes below, underneath the main "/" route
+*/
 import './index.css';
 import App from './App';
 import Login from './Login';
 import MainPage from './MainPage';
+import Profile from './Profile';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,12 +31,16 @@ ReactDOM.render(
         <Route path="/" element={<App/>}>
           <Route path="mainpage" element={<MainPage />} />
           <Route path="login" element={<Login />} />
+          <Route path="profile" element={<Profile />} />
           <Route
+          // 404 Route
             path="*"
             element={
-              <main style={{ padding: "1rem" }}>
-                <p>There's nothing here!</p>
-              </main>
+              <div className='App'>
+              <header className='App-header'>
+                <h1>There's nothing here!</h1>
+                  </header>
+            </div>
             }
           />
         </Route>
