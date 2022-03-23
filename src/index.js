@@ -6,9 +6,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 /* 
 To add a route:
 Create a new file in src: <ROUTE>.js
-Create a new file in css: <ROUTE>.css
-Copy paste app.css contents into <ROUTE>.css and change app to <ROUTE> wherever it appears in there to get some basic formatting
 Look at imports and format of other js files to get an idea of how to format <ROUTE>.js
+Don't forget to import App.css for styling
 In general, create a function called <ROUTE> which returns some html and includes the line:
 export default <ROUTE>;
 at the end. 

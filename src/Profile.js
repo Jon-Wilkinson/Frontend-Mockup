@@ -1,11 +1,11 @@
 import React from 'react';
-import './css/Profile.css';
+import './css/App.css';
 import { useNavigate } from 'react-router-dom'
 
 function Profile() {
   return (
-    <div className='Profile'>
-      <header className='Profle-header'>
+    <div className='App'>
+      <header className='App-header'>
         <h1>This is the profile page!</h1>
           </header>
     </div>

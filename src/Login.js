@@ -1,12 +1,13 @@
 import React from 'react';
-import './css/Login.css';
+import './css/App.css';
 import { useNavigate } from 'react-router-dom'
 
 function Login() {
   let navigate = useNavigate();
 
   return (
-    <header className="Login-header">
+  <div className="App">
+    <header className="App-header">
       <h1>
         This is the login page!
       </h1>
@@ -28,6 +29,7 @@ function Login() {
         }} />
       </form>
     </header>
+  </div>
   );
 }
 
