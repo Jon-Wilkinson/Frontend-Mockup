@@ -12,7 +12,7 @@ function App() {
           paddingBottom: "1rem",
         }}
       >
-        <Link to='mainpage'>Go to Main Page</Link>
+        <Link to='/'>Go to Main Page</Link>
         <hr/>
         <Link to='login'>Go to Login Page</Link>
       </nav>
