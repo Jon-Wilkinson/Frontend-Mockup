@@ -3,6 +3,7 @@ import './ethereum-test.js'
 import {Outlet, Link} from 'react-router-dom';
 
 function App() {
+  var username = localStorage.getItem('username');
   return (
     <div className="App">
     <Outlet />
@@ -15,6 +16,12 @@ function App() {
         <Link to='/'>Go to Main Page</Link>
         <hr/>
         <Link to='login'>Go to Login Page</Link>
+        {username? (
+          <div>
+            <hr/>
+            <Link to='profile'>Go to Profile Page</Link>
+          </div>
+        ) : <div/>}
       </nav>
     </div>
   );
