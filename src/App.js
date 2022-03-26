@@ -18,7 +18,7 @@ function App() {
         <Link to='login'>Go to Login Page</Link>
         {username? (
           <div>
-            <hr/>
+            <hr width="200px"/>
             <Link to='profile'>Go to Profile Page</Link>
           </div>
         ) : <div/>}
