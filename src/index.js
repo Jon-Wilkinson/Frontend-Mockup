@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
+// To run: type npm start in the terminal
+
 /* 
 To add a route:
 Create a new file in src: <ROUTE>.js
