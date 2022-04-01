@@ -3,6 +3,8 @@ import {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function validatePassword(passwordHash, username) {
+  if (!localStorage.getItem(username)) return true; // No username. TODO: account creation
+  // Note: This will cause the account to be created with the first password entered
   if (parseInt(passwordHash) === parseInt(localStorage.getItem(username))) {
     return true;
   }
