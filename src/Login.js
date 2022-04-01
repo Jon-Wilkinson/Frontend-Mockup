@@ -21,6 +21,9 @@ function hash(password) {
   hash = hash % 255;
   console.log("now it is",parseInt(hash));
   return parseInt(hash);
+  // const passwordHash = require('password-hash');
+  // const hash = passwordHash.generate(password);
+  // return hash;
 }
 
 function Login() {
