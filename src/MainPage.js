@@ -4,7 +4,7 @@ function MainPage() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>This is the Main Page sydney!</h1>
+        <h1>This is the Main Page!</h1>
       </header>
     </div>
   );
